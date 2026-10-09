@@ -1,0 +1,24 @@
+[
+  {
+    "id": 2,
+    "incident_id": "INC-1004",
+    "approver": "Hackathon Judge/Admin",
+    "timestamp": "2026-10-09 02:17:12",
+    "decision": "APPROVED",
+    "repair": "database_data_resync",
+    "risk_level": "CRITICAL",
+    "risk_score": 87,
+    "result": "SUCCESS: Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 75.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATA_MUTATION_RISK' is confirmed cleared."
+  },
+  {
+    "id": 1,
+    "incident_id": "INC-1002",
+    "approver": "Hackathon Judge/Admin",
+    "timestamp": "2026-10-09 02:17:12",
+    "decision": "APPROVED",
+    "repair": "repair_database",
+    "risk_level": "HIGH",
+    "risk_score": 63,
+    "result": "SUCCESS: Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 70.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATABASE_DOWN' is confirmed cleared."
+  }
+]

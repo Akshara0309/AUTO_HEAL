@@ -1,0 +1,90 @@
+[
+  {
+    "incident_id": "INC-1005",
+    "timestamp": "2026-10-09 02:17:13",
+    "failure_type": "API_DOWN",
+    "root_cause": "API Gateway service process crash and port 8080 refusal",
+    "evidence": [
+      "Service crash log recorded in logs/app.log",
+      "Error rate elevated to 85.0%",
+      "Health probe reported service DOWN",
+      "Diagnostic probe 'test_api_port' confirmed defect: Connection refused on port 8080: API service process unresponsive",
+      "Historical Precedent: 1 similar incidents found for 'API_DOWN'. Previous repair: 'restart_service'. Success rate: 100.0% (1/1). (supporting evidence)"
+    ],
+    "selected_repair": "restart_service",
+    "risk_score": 0,
+    "sandbox_result": "PASSED",
+    "recovery_result": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 85.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'API_DOWN' is confirmed cleared.",
+    "recovery_time": 0.34,
+    "success": true
+  },
+  {
+    "incident_id": "INC-1004",
+    "timestamp": "2026-10-09 02:17:12",
+    "failure_type": "DATA_MUTATION_RISK",
+    "root_cause": "Persistent storage ledger desynchronization requiring data resync",
+    "evidence": [
+      "Storage ledger desynchronization event logged in logs/app.log",
+      "Uncommitted transaction entries flagged in persistent database tables",
+      "High potential persistent data mutation impact (Risk Score 87/100)",
+      "Diagnostic probe 'test_storage_ledger' confirmed defect: Storage ledger desynchronization detected: uncommitted records in persistent storage requiring resync"
+    ],
+    "selected_repair": "database_data_resync",
+    "risk_score": 87,
+    "sandbox_result": "PASSED",
+    "recovery_result": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 75.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATA_MUTATION_RISK' is confirmed cleared.",
+    "recovery_time": 0.32,
+    "success": true
+  },
+  {
+    "incident_id": "INC-1003",
+    "timestamp": "2026-10-09 02:17:12",
+    "failure_type": "DATABASE_DOWN",
+    "root_cause": "Database connection pool timeout",
+    "evidence": [
+      "Connection timed out to postgresql-primary:5432"
+    ],
+    "selected_repair": "repair_database",
+    "risk_score": 63,
+    "sandbox_result": "FAILED",
+    "recovery_result": "Recovery FAILED: 5/6 verification checks failed (service_health, api_response, database_connectivity, error_rate, relevant_failure_condition). Application has NOT recovered. Escalating to human operator for immediate manual remediation.",
+    "recovery_time": 1.2,
+    "success": false
+  },
+  {
+    "incident_id": "INC-1002",
+    "timestamp": "2026-10-09 02:17:12",
+    "failure_type": "DATABASE_DOWN",
+    "root_cause": "PostgreSQL connection pool exhaustion and socket timeout",
+    "evidence": [
+      "Database connection timeout logged to postgresql-primary:5432",
+      "Query to orders table threw OperationalError timeout",
+      "Error rate spiked to 70.0%",
+      "Diagnostic probe 'test_db_ping' confirmed defect: Database ping probe TIMEOUT after 5000ms: pool exhausted"
+    ],
+    "selected_repair": "repair_database",
+    "risk_score": 63,
+    "sandbox_result": "PASSED",
+    "recovery_result": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 70.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATABASE_DOWN' is confirmed cleared.",
+    "recovery_time": 0.31,
+    "success": true
+  },
+  {
+    "incident_id": "INC-1001",
+    "timestamp": "2026-10-09 02:17:11",
+    "failure_type": "API_DOWN",
+    "root_cause": "API Gateway service process crash and port 8080 refusal",
+    "evidence": [
+      "Service crash log recorded in logs/app.log",
+      "Error rate elevated to 85.0%",
+      "Health probe reported service DOWN",
+      "Diagnostic probe 'test_api_port' confirmed defect: Connection refused on port 8080: API service process unresponsive"
+    ],
+    "selected_repair": "restart_service",
+    "risk_score": 0,
+    "sandbox_result": "PASSED",
+    "recovery_result": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 85.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'API_DOWN' is confirmed cleared.",
+    "recovery_time": 0.33,
+    "success": true
+  }
+]

@@ -1,0 +1,458 @@
+[
+  {
+    "incident_id": "INC-1022",
+    "timestamp": "2026-10-09 06:51:24",
+    "failure_type": "HIGH_LATENCY",
+    "root_cause": "Downstream request thread congestion and artificial latency spike",
+    "evidence": [
+      "Observed latency of 2450.0ms exceeds SLO threshold (250ms)",
+      "Slow API latency warning event in logs",
+      "Diagnostic probe 'test_endpoint_latency' confirmed defect: Response latency DEGRADED: 2450.0ms exceeds 250ms threshold",
+      "Historical Precedent: 2 similar incidents found for 'HIGH_LATENCY'. Previous repair: 'reset_latency_profile'. Success rate: 100.0% (2/2). (supporting evidence)"
+    ],
+    "selected_repair": "reset_latency_profile",
+    "risk_score": 0,
+    "sandbox_result": "PASSED",
+    "recovery_result": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 12.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'HIGH_LATENCY' is confirmed cleared.",
+    "recovery_time": 5.19,
+    "success": true
+  },
+  {
+    "incident_id": "INC-1020",
+    "timestamp": "2026-10-09 06:51:03",
+    "failure_type": "HIGH_LATENCY",
+    "root_cause": "Downstream request thread congestion and artificial latency spike",
+    "evidence": [
+      "Observed latency of 2450.0ms exceeds SLO threshold (250ms)",
+      "Slow API latency warning event in logs",
+      "Diagnostic probe 'test_endpoint_latency' confirmed defect: Response latency DEGRADED: 2450.0ms exceeds 250ms threshold",
+      "Historical Precedent: 1 similar incidents found for 'HIGH_LATENCY'. Previous repair: 'reset_latency_profile'. Success rate: 100.0% (1/1). (supporting evidence)"
+    ],
+    "selected_repair": "reset_latency_profile",
+    "risk_score": 0,
+    "sandbox_result": "PASSED",
+    "recovery_result": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 12.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'HIGH_LATENCY' is confirmed cleared.",
+    "recovery_time": 5.13,
+    "success": true
+  },
+  {
+    "incident_id": "INC-1014",
+    "timestamp": "2026-10-09 01:47:16",
+    "failure_type": "DATA_MUTATION_RISK",
+    "root_cause": "Persistent storage ledger desynchronization requiring data resync",
+    "evidence": [
+      "Storage ledger desynchronization event logged in logs/app.log",
+      "Uncommitted transaction entries flagged in persistent database tables",
+      "High potential persistent data mutation impact (Risk Score 87/100)",
+      "Diagnostic probe 'test_storage_ledger' confirmed defect: Storage ledger desynchronization detected: uncommitted records in persistent storage requiring resync"
+    ],
+    "selected_repair": "database_data_resync",
+    "risk_score": 87,
+    "sandbox_result": "PASSED",
+    "recovery_result": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 75.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATA_MUTATION_RISK' is confirmed cleared.",
+    "recovery_time": 0.34,
+    "success": true
+  },
+  {
+    "incident_id": "INC-1013",
+    "timestamp": "2026-10-09 01:47:16",
+    "failure_type": "DATABASE_DOWN",
+    "root_cause": "PostgreSQL connection pool exhaustion and socket timeout",
+    "evidence": [
+      "Database connection timeout logged to postgresql-primary:5432",
+      "Query to orders table threw OperationalError timeout",
+      "Error rate spiked to 70.0%",
+      "Diagnostic probe 'test_db_ping' confirmed defect: Database ping probe TIMEOUT after 5000ms: pool exhausted"
+    ],
+    "selected_repair": "repair_database",
+    "risk_score": 63,
+    "sandbox_result": "PASSED",
+    "recovery_result": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 70.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATABASE_DOWN' is confirmed cleared.",
+    "recovery_time": 0.34,
+    "success": true
+  },
+  {
+    "incident_id": "INC-1012",
+    "timestamp": "2026-10-09 01:47:15",
+    "failure_type": "HIGH_LATENCY",
+    "root_cause": "Downstream request thread congestion and artificial latency spike",
+    "evidence": [
+      "Observed latency of 2450.0ms exceeds SLO threshold (250ms)",
+      "Slow API latency warning event in logs",
+      "Diagnostic probe 'test_endpoint_latency' confirmed defect: Response latency DEGRADED: 2450.0ms exceeds 250ms threshold"
+    ],
+    "selected_repair": "reset_latency_profile",
+    "risk_score": 0,
+    "sandbox_result": "PASSED",
+    "recovery_result": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 12.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'HIGH_LATENCY' is confirmed cleared.",
+    "recovery_time": 1.57,
+    "success": true
+  },
+  {
+    "incident_id": "INC-1011",
+    "timestamp": "2026-10-09 01:47:14",
+    "failure_type": "API_DOWN",
+    "root_cause": "API Gateway service process crash and port 8080 refusal",
+    "evidence": [
+      "Service crash log recorded in logs/app.log",
+      "Error rate elevated to 85.0%",
+      "Health probe reported service DOWN",
+      "Diagnostic probe 'test_api_port' confirmed defect: Connection refused on port 8080: API service process unresponsive"
+    ],
+    "selected_repair": "restart_service",
+    "risk_score": 0,
+    "sandbox_result": "PASSED",
+    "recovery_result": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 85.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'API_DOWN' is confirmed cleared.",
+    "recovery_time": 0.4,
+    "success": true
+  },
+  {
+    "incident_id": "INC-1010",
+    "timestamp": "2026-10-09 01:45:23",
+    "failure_type": "DATA_MUTATION_RISK",
+    "root_cause": "Persistent storage ledger desynchronization requiring data resync",
+    "evidence": [
+      "Storage ledger desynchronization event logged in logs/app.log",
+      "Uncommitted transaction entries flagged in persistent database tables",
+      "High potential persistent data mutation impact (Risk Score 87/100)",
+      "Diagnostic probe 'test_storage_ledger' confirmed defect: Storage ledger desynchronization detected: uncommitted records in persistent storage requiring resync"
+    ],
+    "selected_repair": "database_data_resync",
+    "risk_score": 87,
+    "sandbox_result": "PASSED",
+    "recovery_result": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 75.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATA_MUTATION_RISK' is confirmed cleared.",
+    "recovery_time": 0.36,
+    "success": true
+  },
+  {
+    "incident_id": "INC-1009",
+    "timestamp": "2026-10-09 01:28:45",
+    "failure_type": "CONFIG_ERROR",
+    "root_cause": "API Gateway process crash",
+    "evidence": [
+      "Requests failing to complete successfully",
+      "Diagnostic probe 'test_api_port' confirmed defect: Connection refused on port 8080: API service process unresponsive"
+    ],
+    "selected_repair": "restart_service",
+    "risk_score": 0,
+    "sandbox_result": "PASSED",
+    "recovery_result": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 85.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'CONFIG_ERROR' is confirmed cleared.",
+    "recovery_time": 0.35,
+    "success": true
+  },
+  {
+    "incident_id": "INC-1002",
+    "timestamp": "2026-10-09 01:21:52",
+    "failure_type": "DATABASE_DOWN",
+    "root_cause": "PostgreSQL connection pool exhaustion and socket timeout",
+    "evidence": [
+      "Database connection timeout logged to postgresql-primary:5432",
+      "Query to orders table threw OperationalError timeout",
+      "Error rate spiked to 70.0%",
+      "Diagnostic probe 'test_db_ping' confirmed defect: Database ping probe TIMEOUT after 5000ms: pool exhausted"
+    ],
+    "selected_repair": "repair_database",
+    "risk_score": 63,
+    "sandbox_result": "PASSED",
+    "recovery_result": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 70.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATABASE_DOWN' is confirmed cleared.",
+    "recovery_time": 0.32,
+    "success": true
+  },
+  {
+    "incident_id": "INC-1001",
+    "timestamp": "2026-10-09 01:21:51",
+    "failure_type": "API_DOWN",
+    "root_cause": "API Gateway service process crash and port 8080 refusal",
+    "evidence": [
+      "Service crash log recorded in logs/app.log",
+      "Error rate elevated to 85.0%",
+      "Health probe reported service DOWN",
+      "Diagnostic probe 'test_api_port' confirmed defect: Connection refused on port 8080: API service process unresponsive"
+    ],
+    "selected_repair": "restart_service",
+    "risk_score": 0,
+    "sandbox_result": "PASSED",
+    "recovery_result": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 85.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'API_DOWN' is confirmed cleared.",
+    "recovery_time": 0.35,
+    "success": true
+  },
+  {
+    "incident_id": "INC-1008",
+    "timestamp": "2026-10-09 01:13:21",
+    "failure_type": "DATABASE_DOWN",
+    "root_cause": "PostgreSQL connection pool exhaustion and socket timeout",
+    "evidence": [
+      "Database connection timeout logged to postgresql-primary:5432",
+      "Query to orders table threw OperationalError timeout",
+      "Error rate spiked to 70.0%",
+      "Diagnostic probe 'test_db_ping' confirmed defect: Database ping probe TIMEOUT after 5000ms: pool exhausted"
+    ],
+    "selected_repair": "repair_database",
+    "risk_score": 63,
+    "sandbox_result": "PASSED",
+    "recovery_result": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 70.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATABASE_DOWN' is confirmed cleared.",
+    "recovery_time": 0.33,
+    "success": true
+  },
+  {
+    "incident_id": "INC-1007",
+    "timestamp": "2026-10-09 01:02:17",
+    "failure_type": "DATABASE_DOWN",
+    "root_cause": "PostgreSQL connection pool exhaustion and socket timeout",
+    "evidence": [
+      "Database connection timeout logged to postgresql-primary:5432",
+      "Query to orders table threw OperationalError timeout",
+      "Error rate spiked to 70.0%",
+      "Diagnostic probe 'test_db_ping' confirmed defect: Database ping probe TIMEOUT after 5000ms: pool exhausted"
+    ],
+    "selected_repair": "repair_database",
+    "risk_score": 63,
+    "sandbox_result": "PASSED",
+    "recovery_result": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 70.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATABASE_DOWN' is confirmed cleared.",
+    "recovery_time": 0.34,
+    "success": true
+  },
+  {
+    "incident_id": "INC-1006",
+    "timestamp": "2026-10-09 01:02:17",
+    "failure_type": "API_DOWN",
+    "root_cause": "API Gateway service process crash and port 8080 refusal",
+    "evidence": [
+      "Service crash log recorded in logs/app.log",
+      "Error rate elevated to 85.0%",
+      "Health probe reported service DOWN",
+      "Diagnostic probe 'test_api_port' confirmed defect: Connection refused on port 8080: API service process unresponsive"
+    ],
+    "selected_repair": "restart_service",
+    "risk_score": 0,
+    "sandbox_result": "PASSED",
+    "recovery_result": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 85.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'API_DOWN' is confirmed cleared.",
+    "recovery_time": 0.41,
+    "success": true
+  },
+  {
+    "incident_id": "INC-0999",
+    "timestamp": "2026-10-07 22:10:12",
+    "failure_type": "API_DOWN",
+    "root_cause": "Network driver failure",
+    "evidence": [
+      "Underlying host socket down"
+    ],
+    "selected_repair": "restart_service",
+    "risk_score": 10,
+    "sandbox_result": "FAILED",
+    "recovery_result": "FAILED",
+    "recovery_time": 4.5,
+    "success": false
+  },
+  {
+    "incident_id": "INC-0997",
+    "timestamp": "2026-10-07 16:20:45",
+    "failure_type": "API_DOWN",
+    "root_cause": "Memory exhaustion crash",
+    "evidence": [
+      "OOM worker termination"
+    ],
+    "selected_repair": "restart_service",
+    "risk_score": 10,
+    "sandbox_result": "PASSED",
+    "recovery_result": "SUCCESS",
+    "recovery_time": 2.2,
+    "success": true
+  },
+  {
+    "incident_id": "INC-0995",
+    "timestamp": "2026-10-06 08:15:33",
+    "failure_type": "API_DOWN",
+    "root_cause": "Port 8080 binding error",
+    "evidence": [
+      "API process crashed"
+    ],
+    "selected_repair": "restart_service",
+    "risk_score": 10,
+    "sandbox_result": "PASSED",
+    "recovery_result": "SUCCESS",
+    "recovery_time": 1.9,
+    "success": true
+  },
+  {
+    "incident_id": "INC-0992",
+    "timestamp": "2026-10-05 11:30:00",
+    "failure_type": "API_DOWN",
+    "root_cause": "API Gateway segfault",
+    "evidence": [
+      "Socket closed abruptly"
+    ],
+    "selected_repair": "restart_service",
+    "risk_score": 10,
+    "sandbox_result": "PASSED",
+    "recovery_result": "SUCCESS",
+    "recovery_time": 1.7,
+    "success": true
+  },
+  {
+    "incident_id": "INC-0990",
+    "timestamp": "2026-10-04 18:44:11",
+    "failure_type": "API_DOWN",
+    "root_cause": "Uncaught exception exit",
+    "evidence": [
+      "Service down log"
+    ],
+    "selected_repair": "restart_service",
+    "risk_score": 10,
+    "sandbox_result": "PASSED",
+    "recovery_result": "SUCCESS",
+    "recovery_time": 2.0,
+    "success": true
+  },
+  {
+    "incident_id": "INC-0988",
+    "timestamp": "2026-10-03 09:05:40",
+    "failure_type": "API_DOWN",
+    "root_cause": "Port connection timeout",
+    "evidence": [
+      "Error rate 85%"
+    ],
+    "selected_repair": "restart_service",
+    "risk_score": 10,
+    "sandbox_result": "PASSED",
+    "recovery_result": "SUCCESS",
+    "recovery_time": 1.9,
+    "success": true
+  },
+  {
+    "incident_id": "INC-0985",
+    "timestamp": "2026-10-02 19:40:00",
+    "failure_type": "DATABASE_DOWN",
+    "root_cause": "Transient connection timeout",
+    "evidence": [
+      "OperationalError timeout"
+    ],
+    "selected_repair": "repair_database",
+    "risk_score": 65,
+    "sandbox_result": "PASSED",
+    "recovery_result": "SUCCESS",
+    "recovery_time": 2.8,
+    "success": true
+  },
+  {
+    "incident_id": "INC-0984",
+    "timestamp": "2026-10-02 14:22:15",
+    "failure_type": "API_DOWN",
+    "root_cause": "API worker deadlock",
+    "evidence": [
+      "Health probe failed 503"
+    ],
+    "selected_repair": "restart_service",
+    "risk_score": 10,
+    "sandbox_result": "PASSED",
+    "recovery_result": "SUCCESS",
+    "recovery_time": 2.1,
+    "success": true
+  },
+  {
+    "incident_id": "INC-0981",
+    "timestamp": "2026-10-01 10:14:02",
+    "failure_type": "API_DOWN",
+    "root_cause": "Port 8080 listener crashed",
+    "evidence": [
+      "Connection refused on port 8080"
+    ],
+    "selected_repair": "restart_service",
+    "risk_score": 10,
+    "sandbox_result": "PASSED",
+    "recovery_result": "SUCCESS",
+    "recovery_time": 1.8,
+    "success": true
+  },
+  {
+    "incident_id": "INC-0979",
+    "timestamp": "2026-09-30 04:30:00",
+    "failure_type": "DATABASE_DOWN",
+    "root_cause": "Socket timeout to 5432",
+    "evidence": [
+      "Health probe failed"
+    ],
+    "selected_repair": "repair_database",
+    "risk_score": 65,
+    "sandbox_result": "PASSED",
+    "recovery_result": "SUCCESS",
+    "recovery_time": 3.1,
+    "success": true
+  },
+  {
+    "incident_id": "INC-0975",
+    "timestamp": "2026-09-29 17:15:00",
+    "failure_type": "DATABASE_DOWN",
+    "root_cause": "PostgreSQL pool leak",
+    "evidence": [
+      "Query failed pool exhausted"
+    ],
+    "selected_repair": "repair_database",
+    "risk_score": 65,
+    "sandbox_result": "PASSED",
+    "recovery_result": "SUCCESS",
+    "recovery_time": 2.9,
+    "success": true
+  },
+  {
+    "incident_id": "INC-0972",
+    "timestamp": "2026-09-28 15:45:00",
+    "failure_type": "CONFIG_ERROR",
+    "root_cause": "Corrupted DB connection string",
+    "evidence": [
+      "Config INVALID"
+    ],
+    "selected_repair": "rollback_config",
+    "risk_score": 35,
+    "sandbox_result": "PASSED",
+    "recovery_result": "SUCCESS",
+    "recovery_time": 2.3,
+    "success": true
+  },
+  {
+    "incident_id": "INC-0970",
+    "timestamp": "2026-09-28 13:00:00",
+    "failure_type": "DATABASE_DOWN",
+    "root_cause": "Connection pool exhausted",
+    "evidence": [
+      "DB timeout 5000ms"
+    ],
+    "selected_repair": "repair_database",
+    "risk_score": 65,
+    "sandbox_result": "PASSED",
+    "recovery_result": "SUCCESS",
+    "recovery_time": 3.2,
+    "success": true
+  },
+  {
+    "incident_id": "INC-0965",
+    "timestamp": "2026-09-26 12:10:00",
+    "failure_type": "CONFIG_ERROR",
+    "root_cause": "Invalid YAML syntax",
+    "evidence": [
+      "Config validation error"
+    ],
+    "selected_repair": "rollback_config",
+    "risk_score": 35,
+    "sandbox_result": "PASSED",
+    "recovery_result": "SUCCESS",
+    "recovery_time": 2.1,
+    "success": true
+  },
+  {
+    "incident_id": "INC-0960",
+    "timestamp": "2026-09-25 08:00:00",
+    "failure_type": "CONFIG_ERROR",
+    "root_cause": "Missing config parameter",
+    "evidence": [
+      "Schema validation failed"
+    ],
+    "selected_repair": "rollback_config",
+    "risk_score": 35,
+    "sandbox_result": "PASSED",
+    "recovery_result": "SUCCESS",
+    "recovery_time": 2.4,
+    "success": true
+  }
+]

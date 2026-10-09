@@ -1,0 +1,3382 @@
+{
+  "INC-1001": {
+    "id": "INC-1001",
+    "timestamp": "2026-10-09 00:20:36",
+    "service": "api-service",
+    "failure_type": "API_DOWN",
+    "severity": "CRITICAL",
+    "status": "RESOLVED",
+    "description": "API service process is DOWN: port 8080 connection refused, health probe failed, error rate spike.",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 00:17:10",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 00:17:10",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 00:20:14",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 00:20:14",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "SERVICE_CRASHED",
+        "message": "API service process crashed: Connection refused on port 8080",
+        "failure_type": "api_service_failure",
+        "port": 8080,
+        "cpu_pct": 95.0
+      },
+      {
+        "timestamp": "2026-10-09 00:20:14",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:14",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:14",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 00:20:14",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "SERVICE_CRASHED",
+        "message": "API service process crashed: Connection refused on port 8080",
+        "failure_type": "api_service_failure",
+        "port": 8080,
+        "cpu_pct": 95.0
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 95.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 85.0,
+      "latency_ms": 22.0
+    },
+    "affected_component": "API Service Gateway",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1001 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Resolved test"
+      }
+    ],
+    "resolution": "Resolved test"
+  },
+  "INC-1002": {
+    "id": "INC-1002",
+    "timestamp": "2026-10-09 00:20:36",
+    "service": "database",
+    "failure_type": "DATABASE_DOWN",
+    "severity": "CRITICAL",
+    "status": "RESOLVED",
+    "description": "Database connection failure: Connection timed out to postgresql-primary:5432, connection pool exhausted.",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 00:20:14",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "SERVICE_CRASHED",
+        "message": "API service process crashed: Connection refused on port 8080",
+        "failure_type": "api_service_failure",
+        "port": 8080,
+        "cpu_pct": 95.0
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "database",
+        "severity": "ERROR",
+        "event": "DB_CONNECTION_TIMEOUT",
+        "message": "Database health check probe failed: Connection timed out to postgresql-primary:5432",
+        "failure_type": "database_connection_failure",
+        "host": "postgresql-primary",
+        "port": 5432
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 32.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 70.0,
+      "latency_ms": 22.0
+    },
+    "affected_component": "PostgreSQL Primary Database Pool",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1002 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Resolved test"
+      }
+    ],
+    "resolution": "Resolved test"
+  },
+  "INC-1003": {
+    "id": "INC-1003",
+    "timestamp": "2026-10-09 00:20:36",
+    "service": "system-monitor",
+    "failure_type": "HIGH_MEMORY",
+    "severity": "HIGH",
+    "status": "RESOLVED",
+    "description": "High memory pressure detected: 94.5% utilized (1920.0MB / 2048MB). OOM crash hazard.",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "database",
+        "severity": "ERROR",
+        "event": "DB_CONNECTION_TIMEOUT",
+        "message": "Database health check probe failed: Connection timed out to postgresql-primary:5432",
+        "failure_type": "database_connection_failure",
+        "host": "postgresql-primary",
+        "port": 5432
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "system-monitor",
+        "severity": "WARNING",
+        "event": "HIGH_MEMORY_USAGE",
+        "message": "System memory exceeded threshold: 94.5% utilized (1920MB / 2048MB)",
+        "failure_type": "high_memory_usage",
+        "memory_mb": 1920.0,
+        "memory_pct": 94.5
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "HIGH",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "HIGH",
+          "latency": "NORMAL"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 32.0,
+      "memory_pct": 94.5,
+      "memory_mb": 1920.0,
+      "error_rate_pct": 15.0,
+      "latency_ms": 22.0
+    },
+    "affected_component": "System Memory Management",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1003 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Resolved test"
+      }
+    ],
+    "resolution": "Resolved test"
+  },
+  "INC-1004": {
+    "id": "INC-1004",
+    "timestamp": "2026-10-09 00:20:37",
+    "service": "api-service",
+    "failure_type": "HIGH_LATENCY",
+    "severity": "MEDIUM",
+    "status": "RESOLVED",
+    "description": "Abnormal response latency: 2450.0ms exceeds maximum SLO threshold (250ms).",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "system-monitor",
+        "severity": "WARNING",
+        "event": "HIGH_MEMORY_USAGE",
+        "message": "System memory exceeded threshold: 94.5% utilized (1920MB / 2048MB)",
+        "failure_type": "high_memory_usage",
+        "memory_mb": 1920.0,
+        "memory_pct": 94.5
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "HIGH",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "HIGH",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HIGH_LATENCY_DETECTED",
+        "message": "API response latency degraded: p95 latency spike 2450ms (threshold: 250ms)",
+        "failure_type": "slow_api_response",
+        "latency_ms": 2450.0
+      },
+      {
+        "timestamp": "2026-10-09 00:20:37",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "SLOW"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:37",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "SLOW"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 32.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 12.0,
+      "latency_ms": 2450.0
+    },
+    "affected_component": "Request Routing Pipeline",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 00:20:37",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1004 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 00:20:37",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Resolved test"
+      }
+    ],
+    "resolution": "Resolved test"
+  },
+  "INC-1005": {
+    "id": "INC-1005",
+    "timestamp": "2026-10-09 00:20:37",
+    "service": "config-service",
+    "failure_type": "CONFIG_ERROR",
+    "severity": "HIGH",
+    "status": "RESOLVED",
+    "description": "Configuration validation failure: missing database parameters in release v1.4.2.",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "HIGH",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "HIGH",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:36",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HIGH_LATENCY_DETECTED",
+        "message": "API response latency degraded: p95 latency spike 2450ms (threshold: 250ms)",
+        "failure_type": "slow_api_response",
+        "latency_ms": 2450.0
+      },
+      {
+        "timestamp": "2026-10-09 00:20:37",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "SLOW"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:37",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "SLOW"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:37",
+        "service": "config-service",
+        "severity": "ERROR",
+        "event": "INVALID_CONFIGURATION",
+        "message": "Schema validation error in config v1.4.2: missing db.pool.min_idle",
+        "failure_type": "configuration_failure",
+        "config_version": "v1.4.2"
+      },
+      {
+        "timestamp": "2026-10-09 00:20:37",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "INVALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:20:37",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "INVALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 32.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 60.0,
+      "latency_ms": 22.0
+    },
+    "affected_component": "Configuration Provider Engine",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 00:20:37",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1005 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 00:20:37",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Resolved test"
+      }
+    ],
+    "resolution": "Resolved test"
+  },
+  "INC-1006": {
+    "id": "INC-1006",
+    "timestamp": "2026-10-09 01:02:16",
+    "service": "api-service",
+    "failure_type": "API_DOWN",
+    "severity": "CRITICAL",
+    "status": "RESOLVED",
+    "description": "API service process is DOWN: port 8080 connection refused, health probe failed, error rate spike.",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 00:42:30",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 00:42:30",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "API_REQUEST_SUCCESS",
+        "message": "GET /api/orders executed successfully: 4 records retrieved (22.0ms)",
+        "failure_type": null,
+        "endpoint": "/api/orders",
+        "http_code": 200,
+        "rows": 4
+      },
+      {
+        "timestamp": "2026-10-09 00:42:30",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 00:42:30",
+        "service": "database",
+        "severity": "ERROR",
+        "event": "DB_QUERY_FAILED",
+        "message": "GET /api/orders failed: OperationalError: Connection timeout after 5000ms connecting to postgresql-primary:5432/orders_db (pool exhausted)",
+        "failure_type": "database_connection_failure",
+        "endpoint": "/api/orders",
+        "http_code": 504
+      },
+      {
+        "timestamp": "2026-10-09 00:42:30",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 00:42:30",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "API_REQUEST_SUCCESS",
+        "message": "GET /api/orders executed successfully: 4 records retrieved (22.0ms)",
+        "failure_type": null,
+        "endpoint": "/api/orders",
+        "http_code": 200,
+        "rows": 4
+      },
+      {
+        "timestamp": "2026-10-09 00:42:30",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 01:02:16",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "SERVICE_CRASHED",
+        "message": "API service process crashed: Connection refused on port 8080",
+        "failure_type": "api_service_failure",
+        "port": 8080,
+        "cpu_pct": 95.0
+      },
+      {
+        "timestamp": "2026-10-09 01:02:16",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:02:16",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 95.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 85.0,
+      "latency_ms": 22.0
+    },
+    "affected_component": "API Service Gateway",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 01:02:16",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1006 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 01:02:16",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:02:16",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: API Gateway service process crash and port 8080 refusal (Confidence: 0.95)"
+      },
+      {
+        "timestamp": "2026-10-09 01:02:16",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'restart_service'"
+      },
+      {
+        "timestamp": "2026-10-09 01:02:16",
+        "status": "HEALING",
+        "event": "STATUS_CHANGED",
+        "note": "Executing approved repair: 'restart_service'."
+      },
+      {
+        "timestamp": "2026-10-09 01:02:16",
+        "status": "VERIFYING",
+        "event": "STATUS_CHANGED",
+        "note": "Verifying 6-point recovery invariants."
+      },
+      {
+        "timestamp": "2026-10-09 01:02:17",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 85.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'API_DOWN' is confirmed cleared."
+      }
+    ],
+    "resolution": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 85.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'API_DOWN' is confirmed cleared."
+  },
+  "INC-1007": {
+    "id": "INC-1007",
+    "timestamp": "2026-10-09 01:02:17",
+    "service": "database",
+    "failure_type": "DATABASE_DOWN",
+    "severity": "CRITICAL",
+    "status": "RESOLVED",
+    "description": "Database connection failure: Connection timed out to postgresql-primary:5432, connection pool exhausted.",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 01:02:16",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:02:16",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "API_REQUEST_FAILED",
+        "message": "GET /api/orders failed: Connection refused on port 8080 (Service is down)",
+        "failure_type": "api_service_failure",
+        "endpoint": "/api/orders",
+        "http_code": 503
+      },
+      {
+        "timestamp": "2026-10-09 01:02:17",
+        "service": "database",
+        "severity": "ERROR",
+        "event": "DB_CONNECTION_TIMEOUT",
+        "message": "Database health check probe failed: Connection timed out to postgresql-primary:5432",
+        "failure_type": "database_connection_failure",
+        "host": "postgresql-primary",
+        "port": 5432
+      },
+      {
+        "timestamp": "2026-10-09 01:02:17",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:02:17",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 32.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 70.0,
+      "latency_ms": 22.0
+    },
+    "affected_component": "PostgreSQL Primary Database Pool",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 01:02:17",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1007 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 01:02:17",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:02:17",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: PostgreSQL connection pool exhaustion and socket timeout (Confidence: 0.97)"
+      },
+      {
+        "timestamp": "2026-10-09 01:02:17",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'repair_database'"
+      },
+      {
+        "timestamp": "2026-10-09 01:02:17",
+        "status": "ESCALATED",
+        "event": "HUMAN_ESCALATION",
+        "note": "Candidate repair 'repair_database' has HIGH risk (Score: 63/100). Autonomous execution paused. SRE Human Operator approval required."
+      },
+      {
+        "timestamp": "2026-10-09 01:02:17",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:02:17",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: PostgreSQL connection pool exhaustion and socket timeout (Confidence: 0.97)"
+      },
+      {
+        "timestamp": "2026-10-09 01:02:17",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'repair_database'"
+      },
+      {
+        "timestamp": "2026-10-09 01:02:17",
+        "status": "HEALING",
+        "event": "STATUS_CHANGED",
+        "note": "Executing approved repair: 'repair_database'."
+      },
+      {
+        "timestamp": "2026-10-09 01:02:17",
+        "status": "VERIFYING",
+        "event": "STATUS_CHANGED",
+        "note": "Verifying 6-point recovery invariants."
+      },
+      {
+        "timestamp": "2026-10-09 01:02:17",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 70.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATABASE_DOWN' is confirmed cleared."
+      }
+    ],
+    "resolution": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 70.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATABASE_DOWN' is confirmed cleared."
+  },
+  "INC-1008": {
+    "id": "INC-1008",
+    "timestamp": "2026-10-09 01:13:21",
+    "service": "database",
+    "failure_type": "DATABASE_DOWN",
+    "severity": "CRITICAL",
+    "status": "RESOLVED",
+    "description": "Database connection failure: Connection timed out to postgresql-primary:5432, connection pool exhausted.",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 01:02:17",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:02:17",
+        "service": "database",
+        "severity": "ERROR",
+        "event": "DB_QUERY_FAILED",
+        "message": "GET /api/orders failed: OperationalError: Connection timeout after 5000ms connecting to postgresql-primary:5432/orders_db (pool exhausted)",
+        "failure_type": "database_connection_failure",
+        "endpoint": "/api/orders",
+        "http_code": 504
+      },
+      {
+        "timestamp": "2026-10-09 01:13:20",
+        "service": "database",
+        "severity": "ERROR",
+        "event": "DB_CONNECTION_TIMEOUT",
+        "message": "Database health check probe failed: Connection timed out to postgresql-primary:5432",
+        "failure_type": "database_connection_failure",
+        "host": "postgresql-primary",
+        "port": 5432
+      },
+      {
+        "timestamp": "2026-10-09 01:13:20",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:13:20",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 28.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 70.0,
+      "latency_ms": 22.0
+    },
+    "affected_component": "PostgreSQL Primary Database Pool",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 01:13:21",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1008 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 01:13:21",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:13:21",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: PostgreSQL connection pool exhaustion and socket timeout (Confidence: 0.97)"
+      },
+      {
+        "timestamp": "2026-10-09 01:13:21",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'repair_database'"
+      },
+      {
+        "timestamp": "2026-10-09 01:13:21",
+        "status": "ESCALATED",
+        "event": "HUMAN_ESCALATION",
+        "note": "Candidate repair 'repair_database' has HIGH risk (Score: 63/100). Autonomous execution paused. SRE Human Operator approval required."
+      },
+      {
+        "timestamp": "2026-10-09 01:13:21",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:13:21",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: PostgreSQL connection pool exhaustion and socket timeout (Confidence: 0.97)"
+      },
+      {
+        "timestamp": "2026-10-09 01:13:21",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'repair_database'"
+      },
+      {
+        "timestamp": "2026-10-09 01:13:21",
+        "status": "HEALING",
+        "event": "STATUS_CHANGED",
+        "note": "Executing approved repair: 'repair_database'."
+      },
+      {
+        "timestamp": "2026-10-09 01:13:21",
+        "status": "VERIFYING",
+        "event": "STATUS_CHANGED",
+        "note": "Verifying 6-point recovery invariants."
+      },
+      {
+        "timestamp": "2026-10-09 01:13:21",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 70.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATABASE_DOWN' is confirmed cleared."
+      }
+    ],
+    "resolution": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 70.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATABASE_DOWN' is confirmed cleared."
+  },
+  "INC-1009": {
+    "id": "INC-1009",
+    "timestamp": "2026-10-09 01:13:32",
+    "service": "config-service",
+    "failure_type": "CONFIG_ERROR",
+    "severity": "HIGH",
+    "status": "RESOLVED",
+    "description": "Configuration validation failure: missing database parameters in release v1.4.2.",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 01:13:21",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:13:21",
+        "service": "database",
+        "severity": "ERROR",
+        "event": "DB_QUERY_FAILED",
+        "message": "GET /api/orders failed: OperationalError: Connection timeout after 5000ms connecting to postgresql-primary:5432/orders_db (pool exhausted)",
+        "failure_type": "database_connection_failure",
+        "endpoint": "/api/orders",
+        "http_code": 504
+      },
+      {
+        "timestamp": "2026-10-09 01:13:32",
+        "service": "config-service",
+        "severity": "ERROR",
+        "event": "INVALID_CONFIGURATION",
+        "message": "Schema validation error in config v1.4.2: missing db.pool.min_idle",
+        "failure_type": "configuration_failure",
+        "config_version": "v1.4.2"
+      },
+      {
+        "timestamp": "2026-10-09 01:13:32",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "INVALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:13:32",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "INVALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 28.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 60.0,
+      "latency_ms": 22.0
+    },
+    "affected_component": "Configuration Provider Engine",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 01:13:32",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1009 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 01:13:32",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:13:32",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: Missing required database configuration parameter in release v1.4.2 (Confidence: 0.93)"
+      },
+      {
+        "timestamp": "2026-10-09 01:13:32",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'rollback_config'"
+      },
+      {
+        "timestamp": "2026-10-09 01:13:32",
+        "status": "HEALING",
+        "event": "STATUS_CHANGED",
+        "note": "Executing approved repair: 'rollback_config'."
+      },
+      {
+        "timestamp": "2026-10-09 01:13:32",
+        "status": "VERIFYING",
+        "event": "STATUS_CHANGED",
+        "note": "Verifying 6-point recovery invariants."
+      },
+      {
+        "timestamp": "2026-10-09 01:13:32",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 60.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'CONFIG_ERROR' is confirmed cleared."
+      },
+      {
+        "timestamp": "2026-10-09 01:13:32",
+        "status": "ESCALATED",
+        "event": "HUMAN_ESCALATION",
+        "note": "Repair rejected by human operator (Hackathon Judge/Admin): Operator flagged potential regression. Autonomous execution halted."
+      },
+      {
+        "timestamp": "2026-10-09 01:28:44",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:28:44",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: API Gateway process crash (Confidence: 0.37)"
+      },
+      {
+        "timestamp": "2026-10-09 01:28:44",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'restart_service'"
+      },
+      {
+        "timestamp": "2026-10-09 01:28:44",
+        "status": "HEALING",
+        "event": "STATUS_CHANGED",
+        "note": "Executing approved repair: 'restart_service'."
+      },
+      {
+        "timestamp": "2026-10-09 01:28:44",
+        "status": "VERIFYING",
+        "event": "STATUS_CHANGED",
+        "note": "Verifying 6-point recovery invariants."
+      },
+      {
+        "timestamp": "2026-10-09 01:28:45",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 85.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'CONFIG_ERROR' is confirmed cleared."
+      }
+    ],
+    "resolution": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 85.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'CONFIG_ERROR' is confirmed cleared."
+  },
+  "INC-1010": {
+    "id": "INC-1010",
+    "timestamp": "2026-10-09 01:45:23",
+    "service": "database",
+    "failure_type": "DATA_MUTATION_RISK",
+    "severity": "CRITICAL",
+    "status": "RESOLVED",
+    "description": "Storage ledger desynchronization: uncommitted records detected in persistent database. Potential persistent data impact.",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 01:44:15",
+        "service": "database",
+        "severity": "CRITICAL",
+        "event": "PERSISTENT_DATA_MUTATION_RISK",
+        "message": "Storage ledger desynchronization: uncommitted records detected in persistent database. Potential persistent data impact.",
+        "failure_type": "persistent_data_mutation",
+        "table": "orders_ledger",
+        "impact": "persistent_data"
+      },
+      {
+        "timestamp": "2026-10-09 01:44:15",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:45:23",
+        "service": "database",
+        "severity": "CRITICAL",
+        "event": "PERSISTENT_DATA_MUTATION_RISK",
+        "message": "Storage ledger desynchronization: uncommitted records detected in persistent database. Potential persistent data impact.",
+        "failure_type": "persistent_data_mutation",
+        "table": "orders_ledger",
+        "impact": "persistent_data"
+      },
+      {
+        "timestamp": "2026-10-09 01:45:23",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:45:23",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 28.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 75.0,
+      "latency_ms": 22.0
+    },
+    "affected_component": "PostgreSQL Storage Engine / Orders Ledger",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 01:45:23",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1010 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 01:45:23",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:45:23",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: Persistent storage ledger desynchronization requiring data resync (Confidence: 0.98)"
+      },
+      {
+        "timestamp": "2026-10-09 01:45:23",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'database_data_resync'"
+      },
+      {
+        "timestamp": "2026-10-09 01:45:23",
+        "status": "ESCALATED",
+        "event": "HUMAN_ESCALATION",
+        "note": "\ud83d\uded1 AUTONOMOUS ACTION BLOCKED: Candidate repair 'database_data_resync' has CRITICAL risk (Score: 87/100). Reason: Potential persistent data impact.. Human approval required."
+      },
+      {
+        "timestamp": "2026-10-09 01:45:23",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:45:23",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: Persistent storage ledger desynchronization requiring data resync (Confidence: 0.98)"
+      },
+      {
+        "timestamp": "2026-10-09 01:45:23",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'database_data_resync'"
+      },
+      {
+        "timestamp": "2026-10-09 01:45:23",
+        "status": "HEALING",
+        "event": "STATUS_CHANGED",
+        "note": "Executing approved repair: 'database_data_resync'."
+      },
+      {
+        "timestamp": "2026-10-09 01:45:23",
+        "status": "VERIFYING",
+        "event": "STATUS_CHANGED",
+        "note": "Verifying 6-point recovery invariants."
+      },
+      {
+        "timestamp": "2026-10-09 01:45:23",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 75.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATA_MUTATION_RISK' is confirmed cleared."
+      }
+    ],
+    "resolution": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 75.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATA_MUTATION_RISK' is confirmed cleared."
+  },
+  "INC-1011": {
+    "id": "INC-1011",
+    "timestamp": "2026-10-09 01:47:13",
+    "service": "api-service",
+    "failure_type": "API_DOWN",
+    "severity": "CRITICAL",
+    "status": "RESOLVED",
+    "description": "API service process is DOWN: port 8080 connection refused, health probe failed, error rate spike.",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 01:45:23",
+        "service": "database",
+        "severity": "ERROR",
+        "event": "DB_QUERY_FAILED",
+        "message": "GET /api/orders failed: OperationalError: Connection timeout after 5000ms connecting to postgresql-primary:5432/orders_db (pool exhausted)",
+        "failure_type": "database_connection_failure",
+        "endpoint": "/api/orders",
+        "http_code": 504
+      },
+      {
+        "timestamp": "2026-10-09 01:45:23",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 01:45:23",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "API_REQUEST_SUCCESS",
+        "message": "GET /api/orders executed successfully: 4 records retrieved (22.0ms)",
+        "failure_type": null,
+        "endpoint": "/api/orders",
+        "http_code": 200,
+        "rows": 4
+      },
+      {
+        "timestamp": "2026-10-09 01:45:23",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 01:45:48",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 01:47:13",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "SERVICE_CRASHED",
+        "message": "API service process crashed: Connection refused on port 8080",
+        "failure_type": "api_service_failure",
+        "port": 8080,
+        "cpu_pct": 95.0
+      },
+      {
+        "timestamp": "2026-10-09 01:47:13",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:47:13",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 95.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 85.0,
+      "latency_ms": 22.0
+    },
+    "affected_component": "API Service Gateway",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 01:47:13",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1011 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:13",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:13",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: API Gateway service process crash and port 8080 refusal (Confidence: 0.95)"
+      },
+      {
+        "timestamp": "2026-10-09 01:47:13",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'restart_service'"
+      },
+      {
+        "timestamp": "2026-10-09 01:47:13",
+        "status": "HEALING",
+        "event": "STATUS_CHANGED",
+        "note": "Executing approved repair: 'restart_service'."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:13",
+        "status": "VERIFYING",
+        "event": "STATUS_CHANGED",
+        "note": "Verifying 6-point recovery invariants."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:14",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 85.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'API_DOWN' is confirmed cleared."
+      }
+    ],
+    "resolution": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 85.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'API_DOWN' is confirmed cleared."
+  },
+  "INC-1012": {
+    "id": "INC-1012",
+    "timestamp": "2026-10-09 01:47:14",
+    "service": "api-service",
+    "failure_type": "HIGH_LATENCY",
+    "severity": "MEDIUM",
+    "status": "RESOLVED",
+    "description": "Abnormal response latency: 2450.0ms exceeds maximum SLO threshold (250ms).",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 01:47:13",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "API_REQUEST_SUCCESS",
+        "message": "GET /api/orders executed successfully: 4 records retrieved (22.0ms)",
+        "failure_type": null,
+        "endpoint": "/api/orders",
+        "http_code": 200,
+        "rows": 4
+      },
+      {
+        "timestamp": "2026-10-09 01:47:13",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:47:13",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "API_REQUEST_FAILED",
+        "message": "GET /api/orders failed: Connection refused on port 8080 (Service is down)",
+        "failure_type": "api_service_failure",
+        "endpoint": "/api/orders",
+        "http_code": 503
+      },
+      {
+        "timestamp": "2026-10-09 01:47:14",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 01:47:14",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "API_REQUEST_SUCCESS",
+        "message": "GET /api/orders executed successfully: 4 records retrieved (22.0ms)",
+        "failure_type": null,
+        "endpoint": "/api/orders",
+        "http_code": 200,
+        "rows": 4
+      },
+      {
+        "timestamp": "2026-10-09 01:47:14",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 01:47:14",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HIGH_LATENCY_DETECTED",
+        "message": "API response latency degraded: p95 latency spike 2450ms (threshold: 250ms)",
+        "failure_type": "slow_api_response",
+        "latency_ms": 2450.0
+      },
+      {
+        "timestamp": "2026-10-09 01:47:14",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "SLOW"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:47:14",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "SLOW"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 28.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 12.0,
+      "latency_ms": 2450.0
+    },
+    "affected_component": "Request Routing Pipeline",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 01:47:14",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1012 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:14",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:14",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: Downstream request thread congestion and artificial latency spike (Confidence: 0.95)"
+      },
+      {
+        "timestamp": "2026-10-09 01:47:14",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'reset_latency_profile'"
+      },
+      {
+        "timestamp": "2026-10-09 01:47:15",
+        "status": "HEALING",
+        "event": "STATUS_CHANGED",
+        "note": "Executing approved repair: 'reset_latency_profile'."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:15",
+        "status": "VERIFYING",
+        "event": "STATUS_CHANGED",
+        "note": "Verifying 6-point recovery invariants."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:15",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 12.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'HIGH_LATENCY' is confirmed cleared."
+      }
+    ],
+    "resolution": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 12.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'HIGH_LATENCY' is confirmed cleared."
+  },
+  "INC-1013": {
+    "id": "INC-1013",
+    "timestamp": "2026-10-09 01:47:15",
+    "service": "database",
+    "failure_type": "DATABASE_DOWN",
+    "severity": "CRITICAL",
+    "status": "RESOLVED",
+    "description": "Database connection failure: Connection timed out to postgresql-primary:5432, connection pool exhausted.",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 01:47:14",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "SLOW"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:47:15",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "SLOW_API_LATENCY",
+        "message": "GET /api/orders processed with degraded latency: 2375.12ms",
+        "failure_type": "slow_api_response",
+        "latency_ms": 2375.12
+      },
+      {
+        "timestamp": "2026-10-09 01:47:15",
+        "service": "database",
+        "severity": "ERROR",
+        "event": "DB_CONNECTION_TIMEOUT",
+        "message": "Database health check probe failed: Connection timed out to postgresql-primary:5432",
+        "failure_type": "database_connection_failure",
+        "host": "postgresql-primary",
+        "port": 5432
+      },
+      {
+        "timestamp": "2026-10-09 01:47:15",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:47:15",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 28.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 70.0,
+      "latency_ms": 22.0
+    },
+    "affected_component": "PostgreSQL Primary Database Pool",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 01:47:15",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1013 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:15",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:15",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: PostgreSQL connection pool exhaustion and socket timeout (Confidence: 0.97)"
+      },
+      {
+        "timestamp": "2026-10-09 01:47:15",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'repair_database'"
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "status": "ESCALATED",
+        "event": "HUMAN_ESCALATION",
+        "note": "\ud83d\uded1 AUTONOMOUS ACTION BLOCKED: Candidate repair 'repair_database' has HIGH risk (Score: 63/100). Reason: Resets active database connection pool handles, potentially interrupting active client transactions.. Human approval required."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: PostgreSQL connection pool exhaustion and socket timeout (Confidence: 0.97)"
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'repair_database'"
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "status": "HEALING",
+        "event": "STATUS_CHANGED",
+        "note": "Executing approved repair: 'repair_database'."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "status": "VERIFYING",
+        "event": "STATUS_CHANGED",
+        "note": "Verifying 6-point recovery invariants."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 70.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATABASE_DOWN' is confirmed cleared."
+      }
+    ],
+    "resolution": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 70.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATABASE_DOWN' is confirmed cleared."
+  },
+  "INC-1014": {
+    "id": "INC-1014",
+    "timestamp": "2026-10-09 01:47:16",
+    "service": "database",
+    "failure_type": "DATA_MUTATION_RISK",
+    "severity": "CRITICAL",
+    "status": "RESOLVED",
+    "description": "Storage ledger desynchronization: uncommitted records detected in persistent database. Potential persistent data impact.",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "service": "database",
+        "severity": "ERROR",
+        "event": "DB_QUERY_FAILED",
+        "message": "GET /api/orders failed: OperationalError: Connection timeout after 5000ms connecting to postgresql-primary:5432/orders_db (pool exhausted)",
+        "failure_type": "database_connection_failure",
+        "endpoint": "/api/orders",
+        "http_code": 504
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "service": "database",
+        "severity": "CRITICAL",
+        "event": "PERSISTENT_DATA_MUTATION_RISK",
+        "message": "Storage ledger desynchronization: uncommitted records detected in persistent database. Potential persistent data impact.",
+        "failure_type": "persistent_data_mutation",
+        "table": "orders_ledger",
+        "impact": "persistent_data"
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 28.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 75.0,
+      "latency_ms": 22.0
+    },
+    "affected_component": "PostgreSQL Storage Engine / Orders Ledger",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1014 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: Persistent storage ledger desynchronization requiring data resync (Confidence: 0.98)"
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'database_data_resync'"
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "status": "ESCALATED",
+        "event": "HUMAN_ESCALATION",
+        "note": "\ud83d\uded1 AUTONOMOUS ACTION BLOCKED: Candidate repair 'database_data_resync' has CRITICAL risk (Score: 87/100). Reason: Potential persistent data impact.. Human approval required."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: Persistent storage ledger desynchronization requiring data resync (Confidence: 0.98)"
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'database_data_resync'"
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "status": "HEALING",
+        "event": "STATUS_CHANGED",
+        "note": "Executing approved repair: 'database_data_resync'."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "status": "VERIFYING",
+        "event": "STATUS_CHANGED",
+        "note": "Verifying 6-point recovery invariants."
+      },
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 75.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATA_MUTATION_RISK' is confirmed cleared."
+      }
+    ],
+    "resolution": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 75.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATA_MUTATION_RISK' is confirmed cleared."
+  },
+  "INC-1015": {
+    "id": "INC-1015",
+    "timestamp": "2026-10-09 01:52:55",
+    "service": "api-service",
+    "failure_type": "API_DOWN",
+    "severity": "CRITICAL",
+    "status": "RESOLVED",
+    "description": "API service process is DOWN: port 8080 connection refused, health probe failed, error rate spike.",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 01:47:16",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 01:49:27",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "API_REQUEST_SUCCESS",
+        "message": "GET /api/orders executed successfully: 4 records retrieved (22.0ms)",
+        "failure_type": null,
+        "endpoint": "/api/orders",
+        "http_code": 200,
+        "rows": 4
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "SERVICE_CRASHED",
+        "message": "API service process crashed: Connection refused on port 8080",
+        "failure_type": "api_service_failure",
+        "port": 8080,
+        "cpu_pct": 95.0
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 95.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 85.0,
+      "latency_ms": 22.0
+    },
+    "affected_component": "API Service Gateway",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1015 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: API Gateway service process crash and port 8080 refusal (Confidence: 0.95)"
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'restart_service'"
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "status": "HEALING",
+        "event": "STATUS_CHANGED",
+        "note": "Executing approved repair: 'restart_service'."
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "status": "VERIFYING",
+        "event": "STATUS_CHANGED",
+        "note": "Verifying 6-point recovery invariants."
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 85.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'API_DOWN' is confirmed cleared."
+      }
+    ],
+    "resolution": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 85.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'API_DOWN' is confirmed cleared."
+  },
+  "INC-1016": {
+    "id": "INC-1016",
+    "timestamp": "2026-10-09 01:52:55",
+    "service": "database",
+    "failure_type": "DATABASE_DOWN",
+    "severity": "CRITICAL",
+    "status": "RESOLVED",
+    "description": "Database connection failure: Connection timed out to postgresql-primary:5432, connection pool exhausted.",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "API_REQUEST_FAILED",
+        "message": "GET /api/orders failed: Connection refused on port 8080 (Service is down)",
+        "failure_type": "api_service_failure",
+        "endpoint": "/api/orders",
+        "http_code": 503
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "service": "database",
+        "severity": "ERROR",
+        "event": "DB_CONNECTION_TIMEOUT",
+        "message": "Database health check probe failed: Connection timed out to postgresql-primary:5432",
+        "failure_type": "database_connection_failure",
+        "host": "postgresql-primary",
+        "port": 5432
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 28.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 70.0,
+      "latency_ms": 22.0
+    },
+    "affected_component": "PostgreSQL Primary Database Pool",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1016 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: PostgreSQL connection pool exhaustion and socket timeout (Confidence: 0.97)"
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'repair_database'"
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "status": "ESCALATED",
+        "event": "HUMAN_ESCALATION",
+        "note": "\ud83d\uded1 AUTONOMOUS ACTION BLOCKED: Candidate repair 'repair_database' has HIGH risk (Score: 63/100). Reason: Resets active database connection pool handles, potentially interrupting active client transactions.. Human approval required."
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: PostgreSQL connection pool exhaustion and socket timeout (Confidence: 0.97)"
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'repair_database'"
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "status": "HEALING",
+        "event": "STATUS_CHANGED",
+        "note": "Executing approved repair: 'repair_database'."
+      },
+      {
+        "timestamp": "2026-10-09 01:52:55",
+        "status": "VERIFYING",
+        "event": "STATUS_CHANGED",
+        "note": "Verifying 6-point recovery invariants."
+      },
+      {
+        "timestamp": "2026-10-09 01:52:56",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 70.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATABASE_DOWN' is confirmed cleared."
+      }
+    ],
+    "resolution": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 70.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATABASE_DOWN' is confirmed cleared."
+  },
+  "INC-1017": {
+    "id": "INC-1017",
+    "timestamp": "2026-10-09 01:53:29",
+    "service": "api-service",
+    "failure_type": "API_DOWN",
+    "severity": "CRITICAL",
+    "status": "RESOLVED",
+    "description": "API service process is DOWN: port 8080 connection refused, health probe failed, error rate spike.",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 01:52:56",
+        "service": "database",
+        "severity": "ERROR",
+        "event": "DB_QUERY_FAILED",
+        "message": "GET /api/orders failed: OperationalError: Connection timeout after 5000ms connecting to postgresql-primary:5432/orders_db (pool exhausted)",
+        "failure_type": "database_connection_failure",
+        "endpoint": "/api/orders",
+        "http_code": 504
+      },
+      {
+        "timestamp": "2026-10-09 01:52:56",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:52:56",
+        "service": "database",
+        "severity": "ERROR",
+        "event": "DB_QUERY_FAILED",
+        "message": "GET /api/orders failed: OperationalError: Connection timeout after 5000ms connecting to postgresql-primary:5432/orders_db (pool exhausted)",
+        "failure_type": "database_connection_failure",
+        "endpoint": "/api/orders",
+        "http_code": 504
+      },
+      {
+        "timestamp": "2026-10-09 01:53:29",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 01:53:29",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 01:53:29",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 01:53:29",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "API_REQUEST_SUCCESS",
+        "message": "GET /api/orders executed successfully: 4 records retrieved (22.0ms)",
+        "failure_type": null,
+        "endpoint": "/api/orders",
+        "http_code": 200,
+        "rows": 4
+      },
+      {
+        "timestamp": "2026-10-09 01:53:29",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "SERVICE_CRASHED",
+        "message": "API service process crashed: Connection refused on port 8080",
+        "failure_type": "api_service_failure",
+        "port": 8080,
+        "cpu_pct": 95.0
+      },
+      {
+        "timestamp": "2026-10-09 01:53:29",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:53:29",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 95.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 85.0,
+      "latency_ms": 22.0
+    },
+    "affected_component": "API Service Gateway",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 01:53:29",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1017 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 01:53:29",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:53:29",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: API Gateway service process crash and port 8080 refusal (Confidence: 0.95)"
+      },
+      {
+        "timestamp": "2026-10-09 01:53:29",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'restart_service'"
+      },
+      {
+        "timestamp": "2026-10-09 01:53:29",
+        "status": "HEALING",
+        "event": "STATUS_CHANGED",
+        "note": "Executing approved repair: 'restart_service'."
+      },
+      {
+        "timestamp": "2026-10-09 01:53:29",
+        "status": "VERIFYING",
+        "event": "STATUS_CHANGED",
+        "note": "Verifying 6-point recovery invariants."
+      },
+      {
+        "timestamp": "2026-10-09 01:53:29",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 85.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'API_DOWN' is confirmed cleared."
+      }
+    ],
+    "resolution": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 85.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'API_DOWN' is confirmed cleared."
+  },
+  "INC-1018": {
+    "id": "INC-1018",
+    "timestamp": "2026-10-09 01:53:30",
+    "service": "database",
+    "failure_type": "DATABASE_DOWN",
+    "severity": "CRITICAL",
+    "status": "RESOLVED",
+    "description": "Database connection failure: Connection timed out to postgresql-primary:5432, connection pool exhausted.",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 01:53:29",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "DOWN",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:53:29",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "API_REQUEST_FAILED",
+        "message": "GET /api/orders failed: Connection refused on port 8080 (Service is down)",
+        "failure_type": "api_service_failure",
+        "endpoint": "/api/orders",
+        "http_code": 503
+      },
+      {
+        "timestamp": "2026-10-09 01:53:30",
+        "service": "database",
+        "severity": "ERROR",
+        "event": "DB_CONNECTION_TIMEOUT",
+        "message": "Database health check probe failed: Connection timed out to postgresql-primary:5432",
+        "failure_type": "database_connection_failure",
+        "host": "postgresql-primary",
+        "port": 5432
+      },
+      {
+        "timestamp": "2026-10-09 01:53:30",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 01:53:30",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 28.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 70.0,
+      "latency_ms": 22.0
+    },
+    "affected_component": "PostgreSQL Primary Database Pool",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 01:53:30",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1018 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 01:53:30",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:53:30",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: PostgreSQL connection pool exhaustion and socket timeout (Confidence: 0.97)"
+      },
+      {
+        "timestamp": "2026-10-09 01:53:30",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'repair_database'"
+      },
+      {
+        "timestamp": "2026-10-09 01:53:30",
+        "status": "ESCALATED",
+        "event": "HUMAN_ESCALATION",
+        "note": "\ud83d\uded1 AUTONOMOUS ACTION BLOCKED: Candidate repair 'repair_database' has HIGH risk (Score: 63/100). Reason: Resets active database connection pool handles, potentially interrupting active client transactions.. Human approval required."
+      },
+      {
+        "timestamp": "2026-10-09 01:53:30",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 01:53:30",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: PostgreSQL connection pool exhaustion and socket timeout (Confidence: 0.97)"
+      },
+      {
+        "timestamp": "2026-10-09 01:53:30",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'repair_database'"
+      },
+      {
+        "timestamp": "2026-10-09 01:53:30",
+        "status": "HEALING",
+        "event": "STATUS_CHANGED",
+        "note": "Executing approved repair: 'repair_database'."
+      },
+      {
+        "timestamp": "2026-10-09 01:53:30",
+        "status": "VERIFYING",
+        "event": "STATUS_CHANGED",
+        "note": "Verifying 6-point recovery invariants."
+      },
+      {
+        "timestamp": "2026-10-09 01:53:30",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 70.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATABASE_DOWN' is confirmed cleared."
+      }
+    ],
+    "resolution": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 70.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'DATABASE_DOWN' is confirmed cleared."
+  },
+  "INC-1019": {
+    "id": "INC-1019",
+    "timestamp": "2026-10-09 01:53:30",
+    "service": "database",
+    "failure_type": "DATABASE_DOWN",
+    "severity": "CRITICAL",
+    "status": "ESCALATED",
+    "description": "Database failure for escalation test",
+    "logs": [],
+    "metrics": {},
+    "affected_component": "Core Subsystem",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 01:53:30",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1019 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 01:53:30",
+        "status": "ESCALATED",
+        "event": "HUMAN_ESCALATION",
+        "note": "Recovery FAILED: 5/6 verification checks failed (service_health, api_response, database_connectivity, error_rate, relevant_failure_condition). Application has NOT recovered. Escalating to human operator for immediate manual remediation."
+      },
+      {
+        "timestamp": "2026-10-09 02:08:38",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 02:08:39",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: PostgreSQL connection pool exhaustion and socket timeout (Confidence: 0.97)"
+      },
+      {
+        "timestamp": "2026-10-09 02:08:40",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'repair_database'"
+      },
+      {
+        "timestamp": "2026-10-09 02:08:41",
+        "status": "ESCALATED",
+        "event": "HUMAN_ESCALATION",
+        "note": "\ud83d\uded1 AUTONOMOUS ACTION BLOCKED: Candidate repair 'repair_database' has HIGH risk (Score: 63/100). Reason: Resets active database connection pool handles, potentially interrupting active client transactions.. Human approval required."
+      },
+      {
+        "timestamp": "2026-10-09 02:25:18",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 02:25:19",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: Severe downstream thread latency delaying database queries (Confidence: 0.35)"
+      },
+      {
+        "timestamp": "2026-10-09 06:50:48",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 06:50:49",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: PostgreSQL connection pool exhaustion and socket timeout (Confidence: 0.97)"
+      },
+      {
+        "timestamp": "2026-10-09 06:50:49",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'repair_database'"
+      },
+      {
+        "timestamp": "2026-10-09 06:50:51",
+        "status": "ESCALATED",
+        "event": "HUMAN_ESCALATION",
+        "note": "\ud83d\uded1 AUTONOMOUS ACTION BLOCKED: Candidate repair 'repair_database' has HIGH risk (Score: 63/100). Reason: Resets active database connection pool handles, potentially interrupting active client transactions.. Human approval required."
+      }
+    ],
+    "resolution": null
+  },
+  "INC-1020": {
+    "id": "INC-1020",
+    "timestamp": "2026-10-09 02:08:31",
+    "service": "api-service",
+    "failure_type": "HIGH_LATENCY",
+    "severity": "MEDIUM",
+    "status": "RESOLVED",
+    "description": "Abnormal response latency: 2450.0ms exceeds maximum SLO threshold (250ms).",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 02:02:47",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 02:03:14",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 02:06:53",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 02:07:00",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "API_REQUEST_SUCCESS",
+        "message": "GET /api/orders executed successfully: 4 records retrieved (22.0ms)",
+        "failure_type": null,
+        "endpoint": "/api/orders",
+        "http_code": 200,
+        "rows": 4
+      },
+      {
+        "timestamp": "2026-10-09 02:08:10",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 02:08:31",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 02:08:31",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HIGH_LATENCY_DETECTED",
+        "message": "API response latency degraded: p95 latency spike 2450ms (threshold: 250ms)",
+        "failure_type": "slow_api_response",
+        "latency_ms": 2450.0
+      },
+      {
+        "timestamp": "2026-10-09 02:08:31",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "SLOW"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 02:08:31",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "SLOW"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 28.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 12.0,
+      "latency_ms": 2450.0
+    },
+    "affected_component": "Request Routing Pipeline",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 02:08:31",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1020 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 02:08:32",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 02:08:33",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: Database query bottleneck or slow lock contention (Confidence: 0.45)"
+      },
+      {
+        "timestamp": "2026-10-09 02:25:19",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 06:50:58",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 06:50:59",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: Downstream request thread congestion and artificial latency spike (Confidence: 0.95)"
+      },
+      {
+        "timestamp": "2026-10-09 06:50:59",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'reset_latency_profile'"
+      },
+      {
+        "timestamp": "2026-10-09 06:51:02",
+        "status": "HEALING",
+        "event": "STATUS_CHANGED",
+        "note": "Executing approved repair: 'reset_latency_profile'."
+      },
+      {
+        "timestamp": "2026-10-09 06:51:02",
+        "status": "VERIFYING",
+        "event": "STATUS_CHANGED",
+        "note": "Verifying 6-point recovery invariants."
+      },
+      {
+        "timestamp": "2026-10-09 06:51:03",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 12.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'HIGH_LATENCY' is confirmed cleared."
+      }
+    ],
+    "resolution": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 12.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'HIGH_LATENCY' is confirmed cleared."
+  },
+  "INC-1021": {
+    "id": "INC-1021",
+    "timestamp": "2026-10-09 02:08:33",
+    "service": "database",
+    "failure_type": "DATA_MUTATION_RISK",
+    "severity": "CRITICAL",
+    "status": "INVESTIGATING",
+    "description": "Storage ledger desynchronization: uncommitted records detected in persistent database. Potential persistent data impact.",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 02:08:31",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HIGH_LATENCY_DETECTED",
+        "message": "API response latency degraded: p95 latency spike 2450ms (threshold: 250ms)",
+        "failure_type": "slow_api_response",
+        "latency_ms": 2450.0
+      },
+      {
+        "timestamp": "2026-10-09 02:08:31",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "SLOW"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 02:08:31",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "SLOW"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 02:08:32",
+        "service": "database",
+        "severity": "CRITICAL",
+        "event": "PERSISTENT_DATA_MUTATION_RISK",
+        "message": "Storage ledger desynchronization: uncommitted records detected in persistent database. Potential persistent data impact.",
+        "failure_type": "persistent_data_mutation",
+        "table": "orders_ledger",
+        "impact": "persistent_data"
+      },
+      {
+        "timestamp": "2026-10-09 02:08:32",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 02:08:33",
+        "service": "api-service",
+        "severity": "ERROR",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DOWN",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "DOWN",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "NORMAL"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 28.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 75.0,
+      "latency_ms": 22.0
+    },
+    "affected_component": "PostgreSQL Storage Engine / Orders Ledger",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 02:08:33",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1021 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 02:08:33",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 02:08:34",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: Persistent storage ledger desynchronization requiring data resync (Confidence: 0.98)"
+      },
+      {
+        "timestamp": "2026-10-09 02:08:35",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'database_data_resync'"
+      },
+      {
+        "timestamp": "2026-10-09 02:08:46",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 02:08:47",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 02:08:48",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: Persistent storage ledger desynchronization requiring data resync (Confidence: 0.98)"
+      },
+      {
+        "timestamp": "2026-10-09 02:08:48",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'database_data_resync'"
+      },
+      {
+        "timestamp": "2026-10-09 02:08:49",
+        "status": "ESCALATED",
+        "event": "HUMAN_ESCALATION",
+        "note": "\ud83d\uded1 AUTONOMOUS ACTION BLOCKED: Candidate repair 'database_data_resync' has CRITICAL risk (Score: 87/100). Reason: Potential persistent data impact.. Human approval required."
+      },
+      {
+        "timestamp": "2026-10-09 02:25:21",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      }
+    ],
+    "resolution": null
+  },
+  "INC-1022": {
+    "id": "INC-1022",
+    "timestamp": "2026-10-09 06:51:18",
+    "service": "api-service",
+    "failure_type": "HIGH_LATENCY",
+    "severity": "MEDIUM",
+    "status": "RESOLVED",
+    "description": "Abnormal response latency: 2450.0ms exceeds maximum SLO threshold (250ms).",
+    "logs": [
+      {
+        "timestamp": "2026-10-09 06:51:00",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "SLOW"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 06:51:02",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "SLOW_API_LATENCY",
+        "message": "GET /api/orders processed with degraded latency: 2375.89ms",
+        "failure_type": "slow_api_response",
+        "latency_ms": 2375.89
+      },
+      {
+        "timestamp": "2026-10-09 06:51:02",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "API_REQUEST_SUCCESS",
+        "message": "GET /api/orders executed successfully: 4 records retrieved (2375.89ms)",
+        "failure_type": null,
+        "endpoint": "/api/orders",
+        "http_code": 200,
+        "rows": 4
+      },
+      {
+        "timestamp": "2026-10-09 06:51:03",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 06:51:03",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "API_REQUEST_SUCCESS",
+        "message": "GET /api/orders executed successfully: 4 records retrieved (22.0ms)",
+        "failure_type": null,
+        "endpoint": "/api/orders",
+        "http_code": 200,
+        "rows": 4
+      },
+      {
+        "timestamp": "2026-10-09 06:51:03",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 06:51:18",
+        "service": "api-service",
+        "severity": "INFO",
+        "event": "HEALTH_CHECK_PASS",
+        "message": "Health probe check passed. Status: UP",
+        "failure_type": null
+      },
+      {
+        "timestamp": "2026-10-09 06:51:18",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HIGH_LATENCY_DETECTED",
+        "message": "API response latency degraded: p95 latency spike 2450ms (threshold: 250ms)",
+        "failure_type": "slow_api_response",
+        "latency_ms": 2450.0
+      },
+      {
+        "timestamp": "2026-10-09 06:51:18",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "SLOW"
+        }
+      },
+      {
+        "timestamp": "2026-10-09 06:51:18",
+        "service": "api-service",
+        "severity": "WARNING",
+        "event": "HEALTH_CHECK_FAIL",
+        "message": "Health probe failed! Overall status: DEGRADED",
+        "failure_type": "health_failure",
+        "checks": {
+          "service": "UP",
+          "database": "UP",
+          "config": "VALID",
+          "memory": "NORMAL",
+          "latency": "SLOW"
+        }
+      }
+    ],
+    "metrics": {
+      "cpu_pct": 28.0,
+      "memory_pct": 36.0,
+      "memory_mb": 145.0,
+      "error_rate_pct": 12.0,
+      "latency_ms": 2450.0
+    },
+    "affected_component": "Request Routing Pipeline",
+    "timeline": [
+      {
+        "timestamp": "2026-10-09 06:51:18",
+        "status": "DETECTED",
+        "event": "INCIDENT_CREATED",
+        "note": "Incident INC-1022 automatically created by Monitoring engine."
+      },
+      {
+        "timestamp": "2026-10-09 06:51:18",
+        "status": "INVESTIGATING",
+        "event": "STATUS_CHANGED",
+        "note": "Gathering multi-source evidence."
+      },
+      {
+        "timestamp": "2026-10-09 06:51:20",
+        "status": "DIAGNOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Root cause verified: Downstream request thread congestion and artificial latency spike (Confidence: 0.95)"
+      },
+      {
+        "timestamp": "2026-10-09 06:51:20",
+        "status": "REPAIR_PROPOSED",
+        "event": "STATUS_CHANGED",
+        "note": "Proposed whitelisted repair action: 'reset_latency_profile'"
+      },
+      {
+        "timestamp": "2026-10-09 06:51:22",
+        "status": "HEALING",
+        "event": "STATUS_CHANGED",
+        "note": "Executing approved repair: 'reset_latency_profile'."
+      },
+      {
+        "timestamp": "2026-10-09 06:51:23",
+        "status": "VERIFYING",
+        "event": "STATUS_CHANGED",
+        "note": "Verifying 6-point recovery invariants."
+      },
+      {
+        "timestamp": "2026-10-09 06:51:23",
+        "status": "RESOLVED",
+        "event": "INCIDENT_RESOLVED",
+        "note": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 12.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'HIGH_LATENCY' is confirmed cleared."
+      }
+    ],
+    "resolution": "Recovery PROVEN: All 6/6 health and functional invariants satisfied. Error rate dropped from 12.0% to 0.0%. Main API endpoint restored to HTTP 200 (4 records in 22.0ms). Target fault 'HIGH_LATENCY' is confirmed cleared."
+  }
+}
